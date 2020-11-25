@@ -54,7 +54,7 @@ router.get('/', (ctx, next) => {
 router.get('/static/:category/:src', async (ctx, next) => {
   let fullpath = path.join(__dirname, ctx.params.category, ctx.params.src)
   ctx.body = await file(fullpath);
-  ctx.type = 'image/png'
+  // ctx.type = 'image/png'
   // ctx.router available
 });
 app
